@@ -59,6 +59,17 @@ namespace TestTaks
             {
                 Console.WriteLine(ex);
             }
+
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+
+            Console.WriteLine("To avoid this problem I've changed Session.cs line 75 from:");
+            Console.WriteLine("tasks[i] = _repository.Save(descriptor.Aggregate, descriptor.Version, cancellationToken);");
+            Console.WriteLine("to: ");
+            Console.WriteLine("await _repository.Save(descriptor.Aggregate, descriptor.Version, cancellationToken);");
+
+
             Console.WriteLine("Press Enter");
             Console.ReadLine();
 
